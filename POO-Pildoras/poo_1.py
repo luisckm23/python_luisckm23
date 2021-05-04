@@ -11,7 +11,7 @@ class Coche():
         self.__enmarcha=arrancamos
 
         if(self.__enmarcha):
-            chequeo=self.cheque_interno()
+            chequeo=self.__cheque_interno()
 
         if(self.__enmarcha and chequeo):
             return "El coche está en marcha"
@@ -26,7 +26,7 @@ class Coche():
         print("El coche tiene:", self.__ruedas, "ruedas. Un ancho de:", self.__anchoChasis, "y un largo de ",
         self.__largoChasis)
 
-    def cheque_interno(self):
+    def __cheque_interno(self):
         print("Realizando chequeo interno")
 
         self.gasolina="ok"
