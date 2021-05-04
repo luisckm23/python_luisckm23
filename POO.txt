@@ -1,0 +1,43 @@
+Clases. Es un molde con atributos y propiedades
+
+Atributos/Propiedaes. Las caracteristicas de la clase que se creo, como nombre, marca, tipo de carro
+
+Metodos/Acciones. Son acciones que puede hacer el objeto de la clase.
+
+Objetos.  Comparten los atributos que se crearon en la clase, pero pueden ser diferentes tipos de objetos
+
+Abstraccion. Se pueden usar objetos sin saber qué incluye la clase, ello a partir de los Atributos.
+
+Herencia. Las clases heredan unas de otras, principalmente Atributos y Métodos.
+
+Modularidad. Dividir la aplicación en partes más pequeñas de acuerdo a los objetos que se están trabajando.
+
+Encapsulación. Reunir todos los métodos que tienen relación con una entidad concreta.
+
+Ocultación. Cada objeto tiene sus datos en concreto, solo se modifican desde dentro de su propia clase.
+
+Constructor. Es un Método especial dentro de una clase que se utiliza para dar un valor
+a los Atributos del objeto al crearlo
+
+Visibilidad. Hay visibilidad pública y privada para los métodos que se crean
+
+Herencia. Es la posibilidad de compartir atributos y metodos entre clases.
+
+------------------------------------------------------------------------------
+B A S E DE D A T O S
+------------------------------------------------------------------------------
+Están conformadas por tablas, columnas(capos) y filas(registros)
+
+BLOG(nombre de la BDD):
+usuarios(tabla)
+
+C	O 	L	U	M	N	A	S
+
+ID 	NOMBRE	Apellidos	Email		Contraseña   	F
+1	Luis	Juarez		luis@gmail	1234		I
+2	Juan	Rodriguez	juan@gmail	1231412		L	
+3	Jose	Perez		josegmail	12313131123	A
+4 	Lety	Martinez	letygmail	aodsadads	S
+
+
+
