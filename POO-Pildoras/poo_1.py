@@ -1,51 +1,50 @@
 class Coche():
-    def __init__(self): #Método constructor
+    def __init__(self): #Metodo constructor __init__ da ESTADO inicial al objeto.
+        self.__largoChasis = 250   #Propiedades/ Poniento guiones bajos antes de la variable se ENCAPSULA y es accesible desde la propia clase
+        self.__anchoChasis = 120   #Propiedades/ Poniento guiones bajos antes de la variable se ENCAPSULA  y es accesible desde la propia clase
+        self.__ruedas = 4          #Propiedades / Poniento guiones bajos antes de la variable se ENCAPSULA  y es accesible desde la propia clase
+        self.__enmarcha = False    #Propiedades/ Poniento guiones bajos antes de la variable se ENCAPSULA  y es accesible desde la propia clase
 
-        self.__largoChasis=250  #Variable encapsulada
-        self.__anchoChasis=120  #Variable encapsulada
-        self.__ruedas=4 #Variable encapsulada
-        self.__enmarcha=False  #Variable encapsulada
-
-    #Estos son los métodos de las acciones que realizan los objetos
-    def arrancar(self, arrancamos):
+    
+    def arrancar(self, arrancamos): #Método de la clase Coche
         self.__enmarcha=arrancamos
-
+        
         if(self.__enmarcha):
-            chequeo=self.__cheque_interno()
+            chequeo=self.__chequeo_interno() #Se está utilizando un Método encapsulado
 
         if(self.__enmarcha and chequeo):
             return "El coche está en marcha"
-
-        elif(self.__enmarcha and chequeo == False):
-            return "Algo ha ido mal, no podemos arrancar"
+        
+        elif(self.__enmarcha and chequeo==False):
+            return "Algo ha ido mal"
 
         else:
             return "El coche está parado"
+    
+    def estado(self): #Método que solamente imprime el estado del coche
+        print("El coche tiene ", self.__ruedas, " ruedas", " un ancho de ", self.__anchoChasis, " y un largo de ", self.__largoChasis)
 
-    def estado(self):
-        print("El coche tiene:", self.__ruedas, "ruedas. Un ancho de:", self.__anchoChasis, "y un largo de ",
-        self.__largoChasis)
-
-    def __cheque_interno(self):
+    #Encapsulamiento de un MÉTODO es con dos giones bajo (__) delante del nombre del metodo para usarlo desde la clase que lo utiliza y no desde otra clase
+    def __chequeo_interno(self):
         print("Realizando chequeo interno")
-
         self.gasolina="ok"
         self.aceite="ok"
         self.puertas="cerradas"
 
         if(self.gasolina=="ok" and self.aceite=="ok" and self.puertas=="cerradas"):
             return True
-        
         else:
             return False
 
+print("Se crea el primer OBJETO de la clase Coche-------------------")
 
-miCoche=Coche() #Este es un objeto con la instancia a su clase
+miCoche=Coche() #Instaciacion de clase 
 print(miCoche.arrancar(True))
+
 miCoche.estado()
 
-print("----------------------A continuación creamos el segundo objeto----------------")
 
-miCoche2=Coche()
+print("Se crea el segundo OBJETO de la clase Coche-----------------")
+miCoche2=Coche() #Instanciacion de clase
 print(miCoche2.arrancar(False))
 miCoche2.estado()
