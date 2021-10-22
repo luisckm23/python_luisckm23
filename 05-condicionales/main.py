@@ -30,72 +30,67 @@ not
 
 #Ejemplo 1
 
-print("### Ejemplo 1 ###")
+print("#### EJEMPLO 1 ###")
 
-#color = input("Adivida cual es mi color favorito: ")
 color = "rojo"
-
 if color == "rojo":
-    print("Enhorabuena ese es mi color favorito")
+    print("El color es Rojo")
 else:
-    print("Ese no es mi color favorito")
+    print("Color incorrecto")
 
-#Ejemplo 2
+#EJEMPLO 2
+print("### EJEMPLO 2 ###")
 
-print("\n### Ejemplo 2 ###")
-#year = int(input("En qué año estamos: "))
-year = 2010
-
+year = 2020
+year = int(input("En qué año estamos? "))
 if year >= 2021:
-    print("Estamos de 2021 en adelante  ")
+    print("Estamos de 2021 en adelante!!")
 else:
     print("Es un año anterior a 2021")
 
-#Ejemplo 3
+#EJEMPLO 3
+print("### EJEMPLO 3 ###")
 
-print("\n### Ejemplo 3 ###")
+nombre = input("Escribe tu nombre: ")
+edad = int(input("¿Ingresa tu edad? "))
+continente = input("¿De qué continente eres? ")
+mayor_edad = 18
 
-nombre = "Luis"
-ciudad = "Queretaro"
-continente = "Europa"
-edad = 14
-mayoriaEdad = 21
 
-if edad >= mayoriaEdad:
-    print(f"{nombre} eres mayor de edad")
-
-    if continente != "Europa":
-        print("Eres europeo")
+if edad >= mayor_edad:
+    print(f"{nombre} es mayor de edad")
+    
+    if continente != "America":
+        print("No eres americano")
     else:
-        print(f"No eres europeo, es de {ciudad}")
-        
+        print(f"{nombre} es de América")
+
 else:
-    print(f"El usuario {nombre} no es mayor de edad porque tiene {edad} años")
+    print(f"{nombre} no es mayor de edad y es de {continente}" )
 
-    #Ejemplo 4
+#EJEMPLO 4
+print("### EJEMPLO 4 ###")
 
-print("\n### Ejemplo 4 ###")
-
-#dia = int(input("Introduce el numero de dia de la semana: "))
-dia = 1
-"""
+dia = int(input("Introduce el número del día de la semana: "))
+"""""
 if dia == 1:
     print("Es lunes")
 else:
     if dia == 2:
         print("Es martes")
     else:
-        if  dia == 3:
+        if dia == 3:
             print("Es miercoles")
         else:
             if dia == 4:
                 print("Es jueves")
             else:
                 if dia == 5:
-                    print ("Es viernes")
+                    print("Es viernes")
                 else:
                     print("Es fin de semana")
-"""
+"""""    
+
 if dia == 1:
     print("Es lunes")
 elif dia == 2:
@@ -109,50 +104,44 @@ elif dia == 5:
 else:
     print("Es fin de semana")
 
+#EJEMPLO 5
+print("### EJEMPLO 5 ###")
 
-#Ejemplo 5
+edad_minima = 18
+edad_maxima = 65
+edad_oficial = int(input("Qué edad tienes? "))
 
-print("\n### Ejemplo 5 ###")
-
-edadMinima = 18
-edadMaxiama = 65
-#edadOficial = int(input("Estás en edad de trabajar? "))
-edadOficial = 14
-
-if edadOficial >= 18 and edadOficial <= 65:
-    print("Está en edad de trabajar")
+if edad_oficial >= 18 and edad_oficial <= 65:
+    print("Esta en edad de trabajar")
 else:
     print("No está en edad de trabajar")
 
-#Ejemplo 6
-
-print("\n### Ejemplo 6 ###")
-
-pais = "Alemania"
-
-if pais == "Mexico" or pais == "España" or pais == "Colombia":
-    print(f"El pais {pais} es de habla hispana" )
-else: 
-    print(f"El pais {pais} no es de habla hispana ")
-
-#Ejemplo 7
-
-print("\n### Ejemplo 7 ###")
+#EJEMPLO 6
+print("### EJEMPLO 6 ###")
 
 pais = "España"
 
-if not (pais == "Mexico" or pais == "España" or pais == "Colombia"):
-    print(f"El pais {pais} NO es de habla hispana" )
-else: 
-    print(f"El pais {pais} SÍ es de habla hispana ")
+if  not (pais == "Mexico" or pais == "España" or pais == "Colombia"):
+    print(f"{pais} NO es un país de habla hispana")
+else:
+    print(f"{pais} SI es de habla hispana")
 
-#Ejemplo 8
+#EJEMPLO 7
+print("### EJEMPLO 7 ###")
 
-print("\n### Ejemplo 8 ###")
+pais = "Alemania"
 
-pais = "Colombia"
+if  pais == "Mexico" or pais == "España" or pais == "Colombia":
+    print(f"{pais} es un país de habla hispana")
+else:
+    print(f"{pais} NO es de habla hispana")
 
-if pais != "Mexico" and pais != "España" and pais != "Colombia":
-    print(f"El pais {pais} NO es de habla hispana" )
-else: 
-    print(f"El pais {pais} SÍ es de habla hispana ")
+#EJEMPLO 8
+print("### EJEMPLO 8 ###")
+
+pais = "Alemania"
+
+if  pais != "Mexico" and pais != "España" and pais != "Colombia":
+    print(f"{pais} NO un país de habla hispana")
+else:
+    print(f"{pais} SI es de habla hispana")
