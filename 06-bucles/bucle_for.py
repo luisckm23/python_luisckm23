@@ -7,29 +7,25 @@ for variable in elemento_iterable (lista, rango, etc)
 """
 contador = 0
 resultado = 0
-
-for contador in range (0, 10):
-    print("Voy por el "+ str(contador))
+for contador in range(0, 10):
+    print("Voy por el " + str(contador))
 
     resultado += contador
 
 print(f"El resultado es: {resultado}")
 
+#EJEMPLO TABLAS DE MULTIPLICAR
+print("## Ejemplo Tablas ##")
 
-###Ejemplo tablas multiplicar 
-print("\n#### Ejemplo T A B L A S #####")
+numero_usuario = int(input("De qué numero quieres la tabla?: "))
 
-numeroUsuario = int(input("De qué número quieres la tabla: "))
+if numero_usuario < 1:
+    numero_usuario = 1
 
-if numeroUsuario < 1:
-    numeroUsuario = 1
-print(f"\nTabla de multiplicar del numero {numeroUsuario}")
+print(f"Tabla de multiplicar del numero {numero_usuario} ")
 
-for numero_Tabla in range (1, 11):
-    if numeroUsuario == 45:
-        print("No se puede usar se numero")
-        break
-    
-    print(f"{numeroUsuario} x {numero_Tabla} = {numeroUsuario * numero_Tabla}")
+for numero_tabla in range (1, 11):
+    print(f"{numero_usuario} x {numero_tabla} = {numero_usuario*numero_tabla}")
 else:
     print("Tabla finalizada")
+
