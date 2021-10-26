@@ -27,3 +27,13 @@ while password != key:
 
 if intentos < 2:
     print("Contraseña correcta, adelante!")
+
+print("Programa que dice cuántas veces aparece una letra dentro de una frase")
+
+frase = input("Escribe una frase: ")
+letra= input("Escribe la letra a contar: ")
+contador = 0
+for i in frase:
+    if i == letra:
+        contador += 1
+print(f"La letra ''{letra}'' aparece {contador} veces en la frase ''{frase}'' ")
