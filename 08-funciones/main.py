@@ -5,140 +5,63 @@ que pueden usarse invocando a la función tantas veces como sea necesario
 def nombreDeMiFuncion (parámetro):
     conjunto de instrucciones
 
-nombreDeMiFuncion (parámetro)
+nombreDeMiFuncion (mi_parámetro)
 """
-
-### Ejemplo 1
-
-print("# # # Ejmplo 1 # # #")
+"""""
+#Ejemplo 1 Definiendo funcion
+print("Ejemplo 1")
 
 def muestraNombre():
     print("Luis")
-    print("Rodrigo")
+    print("Paco")
     print("Juan")
-    print("José")
+    print("Nestor")
     print("\n")
 
-#Invocar funciones
+#Invocar funcion
 muestraNombre()
 
-
-### Ejemplo 2
-
-print("\n# # # Ejmplo 2 # # #")
+#Ejemplo 2 Parámetros
+print("Ejemplo 2")
 
 def mostrarTuNombre(nombre, edad):
-    print(f"Tu nombre es {nombre}")
-
+    print(f"Tu nombre es: {nombre}")
     if edad >= 18:
-        print("Eres mayor de edad ")
+        print("Y eres mayor de edad")
     else:
-        print(f"Eres menor de edad ")
+        print("Eres menos de edad")
 
-nombre = input("\nEscribe tu nombre: ")
-edad = int(input("Ingresa la edad que tienes : "))
+nombre = input("Ingresa tu nombre: ")
+edad = int(input("Escribe tu edad: "))
+
 mostrarTuNombre(nombre, edad)
 
-### Ejemplo 3
-
-print("\n# # # Ejmplo 3 # # #")
+#Ejemplo 3 
+print("\nEjemplo 3")
 
 def tabla(numero):
-    print(f"La tabla de multiplicar del numero {numero}")
-    
-    for contador in range (1 , 11):
+    print(f"Tabla de multiplicar del numero: {numero}")
+
+    for contador in range (1, 11, 2):
         operacion = numero * contador
-        print(f"{numero} x {contador} =  {operacion}")
-    
-    print("\n")
-numero = int(input("Ingresa un numero para hacer la tabla que quieres: "))
+        print(f"{numero} * {contador} = {operacion}")
+
+numero = int(input("Ingresa el numero para hacer la tabla: "))
 tabla(numero)
+"""""
+#Ejemplo 4
+print("\nEjemplo 4")
 
-## Ejemplo 3.1
+def sum():
+    num1=int(input("Escribe el primer numero para sumar: "))
+    num2=int(input("Escribe el segundo numero para sumar: "))
+    resultado = num1+num2
+    print(f"La suma de {num1} + {num2} es: {resultado}")
 
-print("\n# # # Ejmplo 3.1 # # #")
+sum()
 
-for numero_tabla in range (1, 11):
-    tabla(numero_tabla)
+def suma(num1, num2):
+    resultado = num1 + num2
 
-## Ejemplo 4
-
-print("\n# # # Ejmplo 4 # # #")
-print("# # # Parámetros opcionales # # #")
-
-def getEmpleado(nombre, dni = None):
-    print("Empleado")
-    print(f"Empleado: {nombre}")
-    
-    if dni != None:
-        print(f"DNI: {dni}")
-
-getEmpleado("Luis")
-
-## Ejemplo 5
-
-print("\n# # # Ejmplo 5 # # #")
-
-def saludame(nombre):
-    saludo = f"Hola, saludos {nombre}"
-    return saludo
-
-print(saludame("Luis"))
-
-
-## Ejemplo 6
-
-print("\n# # # Ejmplo 6 # # #")
-print("\n# # # CALCULADORA # # #")
-
-def calculadora(numero1, numero2, basicas = False):
-    suma = numero1 + numero2
-    resta = numero1 - numero2
-    multi = numero1 * numero2
-    div = numero1 / numero2
-
-    cadena = ""
-
-    if basicas != False:
-        cadena += "Suma: " + str(suma)
-        cadena += "\n"
-        cadena += "Resta: " + str(resta)
-        cadena += "\n" 
-    else:    
-        cadena += "Multiplicación: " + str(multi)
-        cadena += "\n"
-        cadena += "División: " + str(div)
-
-    return(cadena)
-
-print(calculadora(5, 5))
-
-## Ejemplo 7
-
-print("\n# # # Ejmplo 7 # # #")
-
-def getNombre(nombre):
-    texto = f"El nombre es: {nombre}"
-    return texto
-
-def getApellidos(apellidos):
-    apellidos =f"El apellido es: {apellidos}"
-    return apellidos
-
-def devuelveTodo(nombre, apellidos):
-    texto = getNombre(nombre) + "\n" + getApellidos(apellidos)
-    return texto
-
-print(devuelveTodo("Luis", "Juárez"))
-
-
-## Ejemplo 8
-
-print("\n# # # Ejmplo 8 # # #")
-print("\n# # # FUNCION L A M D A # # #")
-
-dime_el_anio = lambda year: f"El año es: {year}"
-
-print(dime_el_anio(2034))
-
-
+    return resultado
+print(suma(5,7))
