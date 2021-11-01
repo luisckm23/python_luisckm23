@@ -1,26 +1,57 @@
-miDiccionario = {"Alemania": "Berlin", "Francia":"París", "Reino Unido":"Londres", "España":"Madrid"} #Van entre llave
-miDiccionario["Italia"]="Lisboa" #Añade un nuevo elemento
-print(miDiccionario)
-miDiccionario["Italia"]="Roma" #Corregir un valor
-print(miDiccionario)
-del miDiccionario["Reino Unido"] #Borra una Clave:Valor
-print(miDiccionario)
+#La principal característica de los diccionarios es que los datos se almacenan a una clave de tal forma
+#que se crea una asociación de tipo CLAVE:VALOR para cada elemento almacenado
 
-miDiccionario2={"Alemania":"Berlin", 23:"Jordan", "Mosqueteros":3} #Se pueden generar diccionarios alfanuméricos
-print(miDiccionario2)
+#Los elementos almacenados no están ordenados.
 
-#Genera una tupla y a cada Cavle su Valor con el índice correspondiente
-miTupla=["España", "Francia", "Alemania", "Reino Unido"]
-miDiccionario3 = {miTupla[0]:"Madrid", miTupla[1]:"París", miTupla[2]:"Londres", miTupla[3]:"Berlín"}
-print(miDiccionario3["Francia"])
+#Sintaxis
+print("Esta es la sintaxis de un diccionario")
+midiccionario = {"Alemania": "Berlín", "Francia":"París", "Reino Unido": "Londres", "España":"Madrid"}
+print(midiccionario)
 
-#Combina un diccionario con una tupla
-miDiccionario4 ={23:"Jordan", "Nombre": "Michael", "Equipo":"Chicago", "Anillos":[1991, 1992, 1993, 1996, 1997, 1998]}
-print(miDiccionario4["Anillos"])
+#Mostar un elemento único
+print("\nMostar un elemento único")
+print(midiccionario["Francia"])
 
-#Guardar un diccionario dentro de otro diccionario
-miDiccionario5 ={23:"Jordan", "Nombre": "Michael", "Equipo":"Chicago", "Anillos":{"temporadas":[1991, 1992, 1993, 1996, 1997, 1998]}}
-print(miDiccionario5)
-print(miDiccionario5.keys()) #Nos da las Claves del diccionario
-print(miDiccionario5.values()) #Nos da los Valores del diccionario
-print(len(miDiccionario5)) #Nos da la longitud del diccionario en Clave:Valor
+#Agregar elementos a un diccionario construido
+print("\nAgregar elementos a un diccionario construido")
+midiccionario["Italia"]="Lisboa"
+print(midiccionario)
+
+#Modificar elementos a un diccionario construido
+print("\nModificar elementos a un diccionario construido")
+midiccionario["Italia"]="Roma"
+print(midiccionario)
+
+#Eliminar elementos a un diccionario construido
+print("\nEliminar elementos a un diccionario construido")
+del midiccionario["Reino Unido"]
+print(midiccionario)
+
+#Diccionario con diferentes tipos 
+print("\nDiccionario con diferentes tipos ")
+mydictionary = {"Alemania": "Berlín", 23:"Jordan", "Mosqueteros":3}
+print(mydictionary)
+
+#Asignar valores a una tupla
+print("\nAginar valores a una tupla")
+mitupla = ("España", "Francia", "Reino Unido", "Alemania")
+diccionario ={mitupla[0]:"Madrid", mitupla[1]:"Paris", mitupla[2]:"Liverpool", mitupla[3]:"Frankfurt"}
+print(diccionario)
+
+#Almacenar una tupla en un diccionario
+print("\nAlmacenar un diccionario en una tupla")
+midic ={23:"Jordan", "Nombre":"Michale", "Equipo": "Chicago", "anillos":{"temporadas":(1991, 1992, 1993, 1996,1997,1998)}}
+print(midic)
+print(midic["anillos"])
+
+#Metodo para devolver las claves de un diccionario
+print("\nMetodo para devolver las claves de un diccionario")
+print(midic.keys())
+
+#Metodo para devolver los valores de un diccionario
+print("\nMetodo para devolver los valores de un diccionario")
+print(midic.values())
+
+#Metodo para devolver la longitud
+print("\nMetodo para devolver la longitud")
+print(len(midic))
